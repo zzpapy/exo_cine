@@ -46,8 +46,12 @@
                 require 'realisateur.php';            
             ?>
         </select>
-        <label for="">genre</label>
-        <input type="text" name="genre" value="">
+        <select name="genre" id="">
+            <option value="">choisir un genre</option>
+            <?php
+                require 'genre.php';            
+            ?>
+        </select>
         <input type="submit" name="" value="créer">
     </form>
 </section>

@@ -14,6 +14,13 @@
             $query->execute();
             // var_dump($data);die;
         }
+        public function findAll()
+        {             
+            $query = $this->_db->prepare( 'SELECT * FROM genre ');
+            $query->execute();
+
+            return $query->fetchAll();
+        }
         public function setDb(PDO $db)
         {
             $this->_db = $db;

@@ -14,7 +14,7 @@
             $query = $this->_db->prepare( 'INSERT INTO film (titre,sortie,duree,synopsis,realisateur,genre) VALUES( :titre,:sortie,:duree,:synopsis,:realisateur,:genre) ');
             $query->execute($data);
             $id = $this->_db->lastInsertId();
-            // var_dump($id);die;
+            // var_dump($this->_db);die;
             return $id;
         }
         public function setDb(PDO $db)
